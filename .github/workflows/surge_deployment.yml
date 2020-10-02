@@ -35,7 +35,7 @@ jobs:
         run: npm install -g surge
       
       - name: Deploy to Surge
-        run: surge ./ reactpractice_project3.surge.sh --token ${{secrets.Surge_React2020_token}}
+        run: surge ./build reactpractice_project3.surge.sh --token ${{secrets.Surge_React2020_token}}
        
 
 
