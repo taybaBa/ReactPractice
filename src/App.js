@@ -1,12 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+ 
 import './App.css';
+import Room from './Room';
   
-function App(props) {
+function App() {
   return  (
     <div> 
-      <div>hi My name is {props.name} Age is {props.age}</div>
-      hellow fromm App.js
+       
+      <div><Room></Room></div>
     </div> )
   
 }
