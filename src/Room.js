@@ -18,8 +18,9 @@ function Room() {
     
 //   }
   return  (
-    
-    <div className="room dark "> 
+  
+    // eslint-disable-next-line no-template-curly-in-string
+    <div className={`room  ${isLit? "lit": "dark"}`}> 
       This is room    {isLit? "lit" :"dark"}
       <br/>
       Age : {age}
