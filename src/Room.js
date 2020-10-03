@@ -4,11 +4,34 @@ import './App.css';
 
 function Room() {
   let [isLit,setLit]  = useState(false);
+  let [on,setOn]=useState(false);
+   let [temp ,settemp]=useState(22);
   let[age,setAge] = useState(23);
    
   function UpdateLit(){
     console.log("Button Clicked");
     setLit(!isLit)
+   
+  }
+  function LightOn(){
+    console.log("Button Clicked");
+    setOn(!on)
+   settemp(37);
+  }
+  function LightOff(){
+    console.log("Button Clicked");
+    setOn(!on)
+    settemp(22);
+   
+  }
+  function ageincrease(){
+    console.log("Button Clicked");
+     setAge(++age)
+   
+  }
+  function agedec(){
+    console.log("Button Clicked");
+    setAge(age--)
    
   }
 //  const Updateage= ()=>{
@@ -27,6 +50,22 @@ function Room() {
       <br/>
       <button onClick={UpdateLit}>Toggle Light
         </button>
+        <br/>
+        <div className={`room1  ${on? "on": "off"}`}> 
+       Light is {on? "on" :"Off"}
+       <br/>
+       Temperature is :  {temp}
+       <br/>
+       <button onClick={LightOn}>On
+        </button>
+        <button onClick={LightOff}>OFF
+        </button>
+        <button onClick={ageincrease}>+
+        </button>
+        <button onClick={agedec}>-
+        </button>
+        </div>
+        <br/>
         {/* -------------other way of writing function---------- */}
         <button onClick={()=>{
               console.log("increase Age")

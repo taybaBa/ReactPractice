@@ -1,7 +1,11 @@
 .room{
-   min-height: 100vh;
+   min-height: 120%;
    margin: 0;
 }
+.room1{
+    min-height: 120%;
+    margin: 0;
+ }
 .lit{
     background-color: white;
     color: black;
@@ -10,4 +14,12 @@
 .dark{
     background-color: black;
     color: white;
+}
+.on{
+    background-color: turquoise;
+    color: yellow;
+}
+.off{
+    background-color:blue;
+color: cornsilk;
 }
