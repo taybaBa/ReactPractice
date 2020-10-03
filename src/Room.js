@@ -1,5 +1,5 @@
  import React, {useState} from 'react';
- 
+ import './Room.css';
 import './App.css';
 
 function Room() {
@@ -18,7 +18,8 @@ function Room() {
     
 //   }
   return  (
-    <div> 
+    
+    <div className="room dark "> 
       This is room    {isLit? "lit" :"dark"}
       <br/>
       Age : {age}
