@@ -1,13 +1,16 @@
-import React from 'react';
+import React ,{useState} from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Room from './Room';
-  
+ 
+  import Parent from './Parent'
 function App() {
+  let [number,setNumber]= useState(45);
   return  (
     <div> 
-       
-      <div><Room></Room></div>
+       Hellow i am App
+       <Parent num={number}></Parent>
+       <button onClick={()=>{setNumber(++number)}} > Update num</button>
+
     </div> )
   
 }
