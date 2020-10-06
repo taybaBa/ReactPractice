@@ -11,7 +11,7 @@ const ContactForm=(props)=>{
     var[values,setvalues]=useState(initialFieldValues);
 useEffect (()=>
 {
-    if(props.cuurentId  == '')
+    if(props.cuurentId  === '')
     setvalues({
         ...initialFieldValues
     })
@@ -75,9 +75,7 @@ const handleFormSubmit = e =>{
    <div className="form-group input-group col-md-6">
      
     <div className="input-group-prepend">
-        <div className="input-group-text">
-            {/* <i className= "fas fa-mobile-alt"></i> */}
-            </div>
+         
     </div>
     <textarea className="form-control" placeholder="Address" name="address"
    value ={values.address}
@@ -87,7 +85,7 @@ const handleFormSubmit = e =>{
    
    </div>
    <div className="form-control">
-       <input type="submit" value={props.cuurentId ==""? "Save": "Update"} className="btn btn-primary btn-block"   />
+       <input type="submit" value={props.cuurentId ===""? "Save": "Update"} className="btn btn-primary btn-block"   />
    </div>
     </form>
 
