@@ -19,6 +19,7 @@ useEffect (()=>
     setvalues({
         ...props.contactObjects[props.cuurentId]
     })
+    //eslint-disable-next-line
 },[props.cuurentId,props.contactObjects])
 
     const handleInputChange= e =>{

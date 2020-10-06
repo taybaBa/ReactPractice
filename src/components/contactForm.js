@@ -49,6 +49,7 @@ var [cuurentId,setCurrentId]=useState('')
         )
     }
     const onDelete = key =>{
+        //eslint-disable-next-line
         if(window.confirm('Are you sure to delete this record?')){
             firebaseDB.database().ref(`contacts/${key}`).remove(
                 
@@ -64,7 +65,9 @@ var [cuurentId,setCurrentId]=useState('')
         }
     }
     return (
+        //eslint-disable-next-line
        < React.Fragment>
+       
         <div className="row">
             < div className="col-md-8 offset-md-1">
     <div class="jumbotron jumbotron-fluid">
@@ -97,6 +100,7 @@ Email
                  <tbody >
                      {
                          //looping through all keys
+                         //eslint-disable-next-line
                          Object.keys(contactObjects).map(id=>{
                              return<tr key={id}>
                                  <td>{
@@ -105,13 +109,15 @@ Email
                                      contactObjects[id].mobile}</td>
                                      <td>{
                                      contactObjects[id].email}</td>
+                                     
                                      <td>
-                                         <a className =  "btn text-primary" onClick ={()=> {setCurrentId(id)}} >
+                                         
+                                         <p className =  "btn text-primary" onClick ={()=> {setCurrentId(id)}} >  
                                              <i className="fas fa-pencil-alt"></i>
-                                         </a>
-                                         <a className="btn text-danger" onClick ={()=> { onDelete(id)}}>
+                                         </p>
+                                         <p className="btn text-danger" onClick ={()=> { onDelete(id)}}>
                                              <i className="fas fa-trash-alt"></i>
-                                         </a>
+                                         </p>
                                      </td>
                              </tr>
                          })
