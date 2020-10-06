@@ -13,6 +13,6 @@ var config = {
     appId: "1:617678830880:web:cb1658ce5d0eb093ffeb45",
     measurementId: "G-7JBHEM8HPQ"
 };
-    firebase.initializeApp(config);
- export default firebase;
-// export default firDB.database().ref();
+ var firDB= firebase.initializeApp(config);
+
+export default firDB.database().ref();

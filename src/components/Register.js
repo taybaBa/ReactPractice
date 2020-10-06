@@ -1,5 +1,5 @@
 import React from "react";
-import firebase from "../firebase";
+import firDB from "../firebase";
 import md5 from "md5";
 import {
   Grid,
@@ -20,7 +20,8 @@ class Register extends React.Component {
     passwordConfirmation: "",
     errors: [],
     loading: false,
-    usersRef: firebase.database().ref("users")
+    //usersRef: firebase.database().ref("users")
+    usersRef:firDB.database().ref("users")
   };
 
   isFormValid = () => {
@@ -70,7 +71,7 @@ class Register extends React.Component {
     event.preventDefault();
     if (this.isFormValid()) {
       this.setState({ errors: [], loading: true });
-      firebase
+      firDB
         .auth()
         .createUserWithEmailAndPassword(this.state.email, this.state.password)
         .then(createdUser => {

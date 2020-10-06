@@ -26,8 +26,7 @@ var config = {
   measurementId: "G-7JBHEM8HPQ"
 };
 
-var firDB = _app["default"].initializeApp(config); //export default firebase;
-
+var firDB = _app["default"].initializeApp(config);
 
 var _default = firDB.database().ref();
 
