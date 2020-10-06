@@ -25,7 +25,7 @@ var [cuurentId,setCurrentId]=useState('')
         
     }, [])//a similar to componet didamount
     const addorEdit =obj=>{
-        if(cuurentId == '')
+        if(cuurentId === '')
         firebaseDB.database().ref('contacts').push(
             obj,
             err =>
