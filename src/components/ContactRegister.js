@@ -52,7 +52,7 @@ const handleFormSubmit = e =>{
      
      <div className="input-group-prepend">
          <div className="input-group-text">
-             <i className= "fas fa-enevelop"></i>
+             <i className= "fas fa-envelope"></i>
              </div>
      </div>
      <input className="form-control" placeholder="Email" name="email"
